@@ -8,10 +8,10 @@
 #property strict
 
 #ifndef BollingerMartin
-//#define BollingerMartin  // switch trade system to BollingerMartin when compiling
+#define BollingerMartin  // switch trade system to BollingerMartin when compiling
 #endif
-#ifndef FollowTrend
-#define FollowTrend  // switch trade system to FollowTrend when compiling
-#endif
+//#ifndef FollowTrend
+//#define FollowTrend  // switch trade system to FollowTrend when compiling
+//#endif
 
 //+------------------------------------------------------------------+
