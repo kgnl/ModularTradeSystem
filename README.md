@@ -1,5 +1,8 @@
 # Update
 
+- MT version for GH compile
+  https://github.com/EA31337/MT-Platforms/releases/tag/4.0.0.1320
+
 - **Version 2.0**
 
   1.  Rebuild the architecture to make the coupling degree between different trading systems is lower. And Only two lines of code you need to compile different trading systems.
