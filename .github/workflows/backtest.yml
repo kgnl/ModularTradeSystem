@@ -27,8 +27,7 @@ jobs:
         with:
           include: .
           init-platform: true
-          mt-version: 5.0.0.2361
-          path: Water.mq4
+          mt-version: 4.0.0.1322
           verbose: true
       - name: List compiled files
         run: "(Get-ChildItem -Recurse -Path . -Include *.ex[45]).fullname"
