@@ -1,0 +1,39 @@
+name: Backtest
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    branches:
+      - "master"
+      - "dev*"
+    paths-ignore:
+      - "*.md"
+  push:
+    branches:
+      - "master"
+      - "dev*"
+    paths-ignore:
+      - "*.md"
+
+jobs:
+  Compile:
+    defaults:
+      run:
+        shell: powershell
+    runs-on: windows-latest
+    steps:
+      - name: Compile for MQL4
+        uses: fx31337/mql-compile-action@master
+        with:
+          include: .
+          init-platform: true
+          mt-version: 5.0.0.2361
+          verbose: true
+      - name: List compiled files
+        run: "(Get-ChildItem -Recurse -Path . -Include *.ex[45]).fullname"
+      - run: Get-Location
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: EA
+          path: Water.ex4
