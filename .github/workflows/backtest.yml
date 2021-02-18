@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: Water
-          path: Water.ex4"
+          name: EA
+          path: '*.ex4'
   Test:
     needs: Compile
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: Water
+          name: EA
       - name: Run strategy
         uses: ea31337/mql-tester-action@dev
         with:
