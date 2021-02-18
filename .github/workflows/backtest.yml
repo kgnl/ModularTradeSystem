@@ -27,7 +27,7 @@ jobs:
         with:
           include: .
           init-platform: true
-          mt-version: 4.0.0.1320
+          mt-version: 5.0.0.2361
           verbose: true
       - name: List compiled files
         run: "(Get-ChildItem -Recurse -Path . -Include *.ex[45]).fullname"
@@ -37,8 +37,6 @@ jobs:
         with:
           name: EA
           path: Water.ex4
-      - name: Display structure of the files
-        run: ls -R
   Test:
     needs: Compile
     runs-on: ubuntu-latest
@@ -49,9 +47,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: EA
-      - name: Display structure of the files
-        run: ls -R          
+          name: EA    
       - name: Run strategy
         uses: ea31337/mql-tester-action@dev
         with:
