@@ -37,4 +37,33 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Water
-          path: "*.ex?"
+          path: Water.ex4"
+  Test:
+    needs: Compile
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        month: [1]
+        year: [2018, 2019]
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: Water
+      - name: Run strategy
+        uses: ea31337/mql-tester-action@dev
+        with:
+          BtDeposit: 100000
+          BtDest: ${{ github.workspace }}/_results
+          BtMonths: ${{ matrix.month }}
+          BtYears: ${{ matrix.year }}
+          OptFormatBrief: true
+          OptFormatJson: true
+          OptVerbose: true
+          TestExpert: "Water"
+          TestPeriod: H1
+          TestReportName: Report-${{ matrix.year }}-${{ matrix.month }}
+      - name: Upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: results
+          path: ${{ github.workspace }}/_results/*.*
