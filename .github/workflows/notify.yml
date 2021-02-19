@@ -11,4 +11,7 @@ jobs:
         with:
           to: -1001192825873
           token: 1639132129:AAFzPAP-fRvpoyoQ2NrgsWm9GuTpIRnwO1s
-          args: ${{ github.repository }} -> We have a ${{ github.github.event_name }} event. Kösz ${{ github.actor }} | ${{ github.event_path }}
+          formt: markdown
+          message: ```${{ github.repository }}
+          We have a ${{ github.github.event_name }} event. 
+          Kösz ${{ github.actor }}```
