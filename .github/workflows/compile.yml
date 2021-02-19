@@ -1,4 +1,4 @@
-name: Backtest
+name: Compile
 
 # yamllint disable-line rule:truthy
 on:
