@@ -12,4 +12,4 @@ jobs:
           to: -1001192825873
           token: 1639132129:AAFzPAP-fRvpoyoQ2NrgsWm9GuTpIRnwO1s
           formt: markdown
-          message: ```${{ github.repository }} We have a ${{ github.github.event_name }} event. Kösz ${{ github.actor }}```
+          message: ${{ github.repository }} We have a ${{ github.github.event_name }} event. Kösz ${{ github.actor }}
