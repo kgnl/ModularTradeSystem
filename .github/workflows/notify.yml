@@ -9,6 +9,6 @@ jobs:
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
-          to: -582494636
+          to: -1001192825873
           token: 1639132129:AAFzPAP-fRvpoyoQ2NrgsWm9GuTpIRnwO1s
           args: The ${{ github.event_name }} event triggered first step.
