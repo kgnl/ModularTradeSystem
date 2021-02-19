@@ -1,0 +1,14 @@
+name: telegram message
+on: [push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+          to: -582494636
+          token: 1639132129:AAFzPAP-fRvpoyoQ2NrgsWm9GuTpIRnwO1s
+          args: The ${{ github.event_name }} event triggered first step.
