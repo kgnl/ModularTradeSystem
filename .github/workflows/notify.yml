@@ -1,5 +1,10 @@
 name: telegram message
-on: [push]
+on:
+  push:
+    branches:
+      - "master"
+    paths-ignore:
+      - "*.md"
 jobs:
   build:
     name: Build
@@ -12,4 +17,4 @@ jobs:
           to: -1001192825873
           token: 1639132129:AAFzPAP-fRvpoyoQ2NrgsWm9GuTpIRnwO1s
           formt: markdown
-          message: ${{ github.repository }} We have a ${{ github.event_name }} event. (${{ github.actor }})
+          message: ${{ github.actor }} pushed to master ```${{ github.repository }}```
