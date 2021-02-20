@@ -9,13 +9,9 @@ enum StopLossType
    SLPercent, // Set in %
    SLPips, // Set in Pips
    SLDollar, // Set in $,
-   SLAbsolute, // Set in absolite value (rate),
    SLAtr, // Set in ATR(value) * mult,
    SLHighLow, // High/low of X bars
    SLRiskBalance, // Set in % of risked balance
-   #ifdef CUSTOM_SL
-   SLCustom // Use custom strategy SL algorithm
-   #endif
 };
 
 #endif
