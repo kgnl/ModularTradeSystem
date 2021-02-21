@@ -1,5 +1,6 @@
 #include "EasyObject.mqh"
 
+     
 void ShowAccountStatus()
 {
 
