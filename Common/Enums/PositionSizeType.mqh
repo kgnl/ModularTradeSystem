@@ -7,6 +7,7 @@ enum PositionSizeType
 {
    PositionSizeAmount, // $
    PositionSizeContract, // In contracts
+   PositionSizeEquity, // % of equity
    PositionSizeRisk, // Risk in % of equity
    PositionSizeRiskBalance, // Risk in % of balance
    PositionSizeRiskCurrency // Risk in $
