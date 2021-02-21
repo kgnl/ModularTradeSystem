@@ -9,6 +9,7 @@ enum StopLimitType
    StopLimitPercent, // Set in %
    StopLimitPips, // Set in Pips
    StopLimitDollar, // Set in $,
+   StopLimitAbsolute // Set in absolite value (rate)
 };
 
 #endif

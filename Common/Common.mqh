@@ -107,3 +107,4 @@ bool BetterOrderSelect(int index,int select,int pool=-1)
    
    return(false);
 }//End bool BetterOrderSelect(int index,int select,int pool=-1)
+
